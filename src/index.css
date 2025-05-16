@@ -1,0 +1,80 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 180 52% 96%;
+    --foreground: 210 30% 23%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 210 30% 23%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 30% 23%;
+
+    --primary: 178 42% 64%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 6 87% 65%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 180 33% 94%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 178 42% 64% / 0.2;
+    --accent-foreground: 210 30% 23%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 178 42% 64% / 0.2;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 178 42% 64%;
+
+    --radius: 0.75rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-edu-light-blue text-edu-navy font-sans;
+  }
+}
+
+@layer components {
+  .edu-card {
+    @apply bg-white rounded-2xl shadow-sm p-6 border border-edu-teal/10;
+  }
+  
+  .btn-primary {
+    @apply bg-edu-teal text-white rounded-full px-6 py-2 font-medium hover:bg-edu-teal/90 transition-colors;
+  }
+  
+  .btn-secondary {
+    @apply bg-edu-coral text-white rounded-full px-6 py-2 font-medium hover:bg-edu-coral/90 transition-colors;
+  }
+  
+  .nav-item {
+    @apply flex items-center gap-2 px-4 py-3 rounded-lg transition-colors;
+  }
+  
+  .nav-item.active {
+    @apply bg-edu-teal text-white;
+  }
+  
+  .nav-item:not(.active) {
+    @apply hover:bg-edu-teal/10 text-edu-navy;
+  }
+}
+
+#root {
+  @apply w-full min-h-screen;
+}
